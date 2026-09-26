@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management System</title>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Student Management System</h1>
+
+    <div class="form-container">
+
+        <h2>Add New Student</h2>
+
+        <form id="studentForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter student name"
+                required
+            >
+
+            <input
+                type="number"
+                id="age"
+                placeholder="Enter age"
+                required
+            >
+
+            <input
+                type="text"
+                id="department"
+                placeholder="Enter department"
+                required
+            >
+
+            <input
+                type="number"
+                id="marks"
+                placeholder="Enter marks"
+                required
+            >
+
+            <select id="semester" required>
+                <option value="">Select Semester</option>
+                <option value="1st">1st Semester</option>
+                <option value="2nd">2nd Semester</option>
+                <option value="3rd">3rd Semester</option>
+                <option value="4th">4th Semester</option>
+                <option value="5th">5th Semester</option>
+                <option value="6th">6th Semester</option>
+                <option value="7th">7th Semester</option>
+                <option value="8th">8th Semester</option>
+            </select>
+
+            <button type="submit">Add Student</button>
+
+        </form>
+
+    </div>
+
+
+    <div class="search-container">
+
+        <h2>Search Students</h2>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by name, department, semester..."
+        >
+
+        <div class="filters">
+
+            <button onclick="filterStudents('all')">
+                All
+            </button>
+
+            <button onclick="filterStudents('passed')">
+                Passed
+            </button>
+
+            <button onclick="filterStudents('failed')">
+                Failed
+            </button>
+
+            <button onclick="filterStudents('high')">
+                High Marks
+            </button>
+
+            <button onclick="filterStudents('low')">
+                Low Marks
+            </button>
+
+            <button onclick="filterStudents('BSCS')">
+                BSCS
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <h2 class="section-title">Student Records</h2>
+
+    <div id="studentContainer" class="card-container">
+
+        <!-- JavaScript will display cards here -->
+
+    </div>
+
+
+    <div class="logic-section">
+
+        <h2>If-Else Conditions</h2>
+
+        <div id="conditionOutput"></div>
+
+    </div>
+
+
+    <div class="logic-section">
+
+        <h2>For Loop - Student Names</h2>
+
+        <div id="forLoopOutput"></div>
+
+    </div>
+
+
+    <div class="logic-section">
+
+        <h2>While Loop - Student Processing</h2>
+
+        <div id="whileLoopOutput"></div>
+
+    </div>
+
+
+    <div class="logic-section">
+
+        <h2>Loop + Conditions - Student Categories</h2>
+
+        <div id="categoryOutput"></div>
+
+    </div>
+
+
+
+    <div id="editModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Edit Student</h2>
+
+            <form id="editForm">
+
+                <input
+                    type="text"
+                    id="editName"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="editAge"
+                    placeholder="Age"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="editDepartment"
+                    placeholder="Department"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="editMarks"
+                    placeholder="Marks"
+                    required
+                >
+
+                <select id="editSemester" required>
+
+                    <option value="1st">1st Semester</option>
+                    <option value="2nd">2nd Semester</option>
+                    <option value="3rd">3rd Semester</option>
+                    <option value="4th">4th Semester</option>
+                    <option value="5th">5th Semester</option>
+                    <option value="6th">6th Semester</option>
+                    <option value="7th">7th Semester</option>
+                    <option value="8th">8th Semester</option>
+
+                </select>
+
+                <button type="submit">
+                    Update
+                </button>
+
+                <button
+                    type="button"
+                    onclick="closeModal()"
+                    class="cancel-btn"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Link JavaScript file -->
+    <script src="task1.js"></script>
+
+</body>
+</html>
